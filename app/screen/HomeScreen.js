@@ -1,14 +1,16 @@
 // HomeScreen.js
 import React from 'react';
-import { View, Text, Button,TouchableOpacity,StyleSheet,ScrollView } from 'react-native';
+import { View, Text, Button,TouchableOpacity,StyleSheet,ScrollView,Image } from 'react-native';
 import Todo from '../Todo';
+
+
 
 function HomeScreen({ navigation }) {
   return (
-    <View>
+    <>
 
         <View>
-
+        <Image style={styles2.image} source={require('../../assests/1.png')}></Image>
 
       <TouchableOpacity >
         <Text style={styles.button}>ADD YOUR NEW TASK</Text>
@@ -188,7 +190,7 @@ function HomeScreen({ navigation }) {
 
         </ScrollView>
 
-    </View>
+    </>
   );
 }
 
@@ -213,3 +215,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     }
   });
+
+  const styles2 = StyleSheet.create({
+    image: {
+      width: '100%',
+      resizeMode: 'cover',
+    },
+  });
+  

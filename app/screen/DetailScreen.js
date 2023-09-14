@@ -1,16 +1,25 @@
 // DetailsScreen.js
 import React from 'react';
-import { View, Text, Button,TouchableOpacity,StyleSheet } from 'react-native';
+import { View, Text, Button,TouchableOpacity,StyleSheet,ScrollView } from 'react-native';
 import Todo from '../Todo';
+import Slidermain from '../Slidermain';
+
 
 function DetailScreen({navigation}) {
   return (
     <>
+
         
+        <Slidermain></Slidermain>
+        <ScrollView>
+        <View>
         <Todo></Todo>
+
         <TouchableOpacity onPress={() => navigation.goBack()}>
             <Text style={styles.button}>GO TO HOME</Text>
         </TouchableOpacity>
+        </View>
+        </ScrollView>
 
     </>
   );
